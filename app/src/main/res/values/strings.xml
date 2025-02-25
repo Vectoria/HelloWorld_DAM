@@ -3,4 +3,6 @@
     <string name="hello_string">Hello Android World!</string>
     <string name="textview2">My first App</string>
     <string name="mclovin">É o McLovin</string>
+    <string name="slowdive_vertical">Slowdive</string>
+    <string name="slowdive_horizontal">Slowdive_horizontal</string>
 </resources>
