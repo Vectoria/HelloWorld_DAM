@@ -6,7 +6,7 @@ import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 
-class SpecsActivity: AppCompatActivity() {
+class SpecsActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
@@ -23,10 +23,15 @@ class SpecsActivity: AppCompatActivity() {
             Hardware: ${Build.HARDWARE}
             Bootloader: ${Build.BOOTLOADER}
             Android Version: ${Build.VERSION.RELEASE}
+            Base: ${Build.VERSION_CODES.BASE}
+            Incremental: ${Build.VERSION.INCREMENTAL}
+            SDK: ${Build.VERSION.SDK_INT}
             API Level: ${Build.VERSION.SDK_INT}
             Build ID: ${Build.ID}
             Build Type: ${Build.TYPE}
+            User: ${Build.USER}
             Fingerprint: ${Build.FINGERPRINT}
+            Display: ${Build.DISPLAY}
         """.trimIndent()
 
         textViewInfo.text = systemInfo

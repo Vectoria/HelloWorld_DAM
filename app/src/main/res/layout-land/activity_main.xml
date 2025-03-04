@@ -9,16 +9,17 @@
 
     <Button
         android:id="@+id/button_specs2"
-        android:layout_width="284dp"
-        android:layout_height="55dp"
+        android:layout_width="276dp"
+        android:layout_height="42dp"
         android:backgroundTint="#7227E7"
+        android:onClick="specsOnClick"
         android:shape="oval"
         android:text="@string/specs_horizontal"
         app:icon="@drawable/b_info"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/topo"
+        app:layout_constraintTop_toBottomOf="@+id/calendarView"
         app:layout_constraintVertical_bias="0.983"
         tools:ignore="MissingConstraints" />
 
@@ -59,11 +60,11 @@
         android:id="@+id/calendarView"
         android:layout_width="334dp"
         android:layout_height="248dp"
-        android:layout_marginEnd="92dp"
+        android:layout_marginEnd="96dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/topo"
-        app:layout_constraintVertical_bias="0.445"
+        app:layout_constraintVertical_bias="0.108"
         tools:ignore="MissingConstraints" />
 
     <ImageView
@@ -73,7 +74,7 @@
         android:contentDescription="@string/slowdive_horizontal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/calendarView"
-        app:layout_constraintHorizontal_bias="0.504"
+        app:layout_constraintHorizontal_bias="0.566"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/topo"
         app:layout_constraintVertical_bias="0.352"
