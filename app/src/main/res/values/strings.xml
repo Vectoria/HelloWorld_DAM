@@ -7,4 +7,5 @@
     <string name="slowdive_horizontal">Slowdive_horizontal</string>
     <string name="fixe">fixe</string>
     <string name="specs_horizontal">Informação das especificações</string>
+    <string name="specs_text">TextView</string>
 </resources>

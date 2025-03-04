@@ -1,6 +1,8 @@
 package dam_a50731.helloworld
 
+import android.content.Intent
 import android.os.Bundle
+import android.view.View
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -17,5 +19,10 @@ class MainActivity : AppCompatActivity() {
             insets
         }
         println(this@MainActivity.localClassName + " onCreate")
+    }
+
+    fun specsOnClick(view: View?){
+        val intent = Intent(this, SpecsActivity::class.java)
+        startActivity(intent)
     }
 }
