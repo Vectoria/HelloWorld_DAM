@@ -8,7 +8,7 @@
     tools:context=".MainActivity">
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/HelloWorld"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="sans-serif-black"
@@ -37,7 +37,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.666"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView2"
+        app:layout_constraintTop_toBottomOf="@+id/HelloWorld"
         tools:ignore="TextSizeCheck" />
 
     <CalendarView
@@ -48,12 +48,12 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView4"
+        app:layout_constraintTop_toBottomOf="@+id/slowdive"
         app:layout_constraintVertical_bias="1.0"
         tools:ignore="MissingConstraints" />
 
     <ImageView
-        android:id="@+id/imageView4"
+        android:id="@+id/slowdive"
         android:layout_width="211dp"
         android:layout_height="204dp"
         android:layout_marginTop="20dp"
@@ -65,18 +65,18 @@
         app:srcCompat="@drawable/slowdive_slomo" />
 
     <Button
-        android:id="@+id/button"
-        android:layout_width="59dp"
-        android:layout_height="38dp"
-        android:layout_marginTop="4dp"
-        android:layout_marginBottom="16dp"
-        android:textColorLink="#B44D4D"
-        app:icon="@android:drawable/ic_menu_info_details"
-        app:iconPadding="12dp"
+        android:id="@+id/button_specs"
+        android:layout_width="64dp"
+        android:layout_height="33dp"
+        android:layout_marginBottom="8dp"
+        android:backgroundTint="#7227E7"
+        android:shape="oval"
+        app:icon="@drawable/b_info"
         app:layout_constraintBottom_toTopOf="@+id/topo"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toEndOf="@+id/textView2"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintStart_toEndOf="@+id/HelloWorld"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.863"
+        tools:ignore="MissingConstraints" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

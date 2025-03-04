@@ -7,8 +7,23 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+    <Button
+        android:id="@+id/button_specs2"
+        android:layout_width="284dp"
+        android:layout_height="55dp"
+        android:backgroundTint="#7227E7"
+        android:shape="oval"
+        android:text="@string/specs_horizontal"
+        app:icon="@drawable/b_info"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/topo"
+        app:layout_constraintVertical_bias="0.983"
+        tools:ignore="MissingConstraints" />
+
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/HelloWorld"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="sans-serif-black"
@@ -37,7 +52,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.666"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView2"
+        app:layout_constraintTop_toBottomOf="@+id/HelloWorld"
         tools:ignore="TextSizeCheck" />
 
     <CalendarView
@@ -52,7 +67,7 @@
         tools:ignore="MissingConstraints" />
 
     <ImageView
-        android:id="@+id/imageView"
+        android:id="@+id/slowdive"
         android:layout_width="251dp"
         android:layout_height="201dp"
         android:contentDescription="@string/slowdive_horizontal"
