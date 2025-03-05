@@ -1,15 +1,18 @@
 package dam_a50731.helloworld
 
+import android.annotation.SuppressLint
 import android.os.Build
 import android.os.Bundle
+import android.view.animation.Animation
+import android.widget.ImageView
 import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import com.google.android.material.animation.AnimationUtils
 
 class SpecsActivity : AppCompatActivity() {
-    Animation rotateAnimation
-    ImageView imageView
+    lateinit var rotateAnimation : Animation
+    @SuppressLint("MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
@@ -39,11 +42,12 @@ class SpecsActivity : AppCompatActivity() {
 
         textViewInfo.text = systemInfo
 
-        rotateAnimation();
+        val imageView = findViewById<ImageView>(R.id.settings_icon)
+
+        // Aplica a animação de rotação
+        val rotateAnimation: Animation = android.view.animation.AnimationUtils.loadAnimation(this, R.anim.rotation)
+        imageView.startAnimation(rotateAnimation)
     }
 
-    private fun rotateAnimation() {
-        rotateAnimation= AnimationUtils.
-    }
 
 }
