@@ -16,5 +16,13 @@
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.044" />
+        app:layout_constraintVertical_bias="0.954" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="123dp"
+        android:layout_height="89dp"
+        app:srcCompat="@drawable/baseline_settings_24"
+        tools:layout_editor_absoluteX="144dp"
+        tools:layout_editor_absoluteY="190dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>

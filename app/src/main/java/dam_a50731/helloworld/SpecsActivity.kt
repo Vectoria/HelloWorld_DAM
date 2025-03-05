@@ -5,8 +5,11 @@ import android.os.Bundle
 import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
+import com.google.android.material.animation.AnimationUtils
 
 class SpecsActivity : AppCompatActivity() {
+    Animation rotateAnimation
+    ImageView imageView
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
@@ -35,6 +38,12 @@ class SpecsActivity : AppCompatActivity() {
         """.trimIndent()
 
         textViewInfo.text = systemInfo
+
+        rotateAnimation();
+    }
+
+    private fun rotateAnimation() {
+        rotateAnimation= AnimationUtils.
     }
 
 }
