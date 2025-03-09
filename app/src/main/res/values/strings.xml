@@ -9,4 +9,5 @@
     <string name="specs_horizontal">Informação das especificações</string>
     <string name="specs_text">TextView</string>
     <string name="engrenagem">engrenagem</string>
+    <string name="notificacao">Receber notificação</string>
 </resources>
