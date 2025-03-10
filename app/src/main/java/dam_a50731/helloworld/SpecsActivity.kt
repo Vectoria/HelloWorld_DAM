@@ -43,45 +43,52 @@ class SpecsActivity : AppCompatActivity() {
         val systemInfo = """
             Manufacturer: ${Build.MANUFACTURER}
             Model: ${Build.MODEL}
-            Device: ${Build.DEVICE}
             Brand: ${Build.BRAND}
-            Board: ${Build.BOARD}
-            Hardware: ${Build.HARDWARE}
-            Bootloader: ${Build.BOOTLOADER}
-            Android Version: ${Build.VERSION.RELEASE}
-            Base: ${Build.VERSION_CODES.BASE}
+            Type: ${Build.TYPE}
+            User: ${Build.USER}
+            Base: 1
             Incremental: ${Build.VERSION.INCREMENTAL}
             SDK: ${Build.VERSION.SDK_INT}
-            API Level: ${Build.VERSION.SDK_INT}
-            Build ID: ${Build.ID}
-            Build Type: ${Build.TYPE}
-            User: ${Build.USER}
-            Fingerprint: ${Build.FINGERPRINT}
+            Version Code: ${Build.VERSION.RELEASE}
             Display: ${Build.DISPLAY}
         """.trimIndent()
+
 
         textViewInfo.text = systemInfo
 
         val imageView = findViewById<ImageView>(R.id.settings_icon)
 
         // Aplica a animação de rotação
-        val rotateAnimation: Animation =
+        val rotateAnimation: Animation? =
             android.view.animation.AnimationUtils.loadAnimation(this, R.anim.rotation)
-        imageView.startAnimation(rotateAnimation)
+        imageView?.startAnimation(rotateAnimation)
 
 
         // fazer notificação
         // do vídeo indiano: https://youtu.be/Kan_5OeSBN0?si=9u_9M7qNv3it8FNc
         createNotificationChannel()
 
-        //video
-        val video: String =
-            "<iframe width=\"100%\" height=\"100%\" src=\"https://www.youtube.com/embed/k9iYm9PEAHg?si=mGj4ab4XuNoo0lEp\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen></iframe>"
+        // video do youtube
+        // https://youtu.be/71juUqkBGY4?si=pxSPZzyvHKMS9bj7
+        val video = """
+            <html style="margin:0; padding:0;">
+                <body style="margin:0; padding:0;">
+                    <iframe 
+                        width="100%" 
+                        height="100%" 
+                        src="https://www.youtube.com/embed/k9iYm9PEAHg?si=mGj4ab4XuNoo0lEp" 
+                        frameborder="0" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                        referrerpolicy="strict-origin-when-cross-origin" 
+                        allowfullscreen>
+                    </iframe>
+                </body>
+            </html>
+        """.trimIndent()
         val webView: WebView = findViewById<WebView>(R.id.webView)
-        webView.loadData(video,"text/html","utf-8")
+        webView.loadData(video, "text/html", "utf-8")
         webView.settings.javaScriptEnabled = true
         webView.webChromeClient = WebChromeClient()
-
 
 
     }
