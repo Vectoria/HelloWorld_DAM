@@ -10,6 +10,8 @@ import android.os.Build
 import android.os.Bundle
 import android.view.View
 import android.view.animation.Animation
+import android.webkit.WebChromeClient
+import android.webkit.WebView
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
@@ -24,7 +26,7 @@ import androidx.core.view.WindowInsetsCompat
 const val CHANNEL_ID = "channelID"
 
 class SpecsActivity : AppCompatActivity() {
-    @SuppressLint("MissingInflatedId")
+    @SuppressLint("MissingInflatedId", "SetJavaScriptEnabled")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
@@ -72,6 +74,15 @@ class SpecsActivity : AppCompatActivity() {
         // do vídeo indiano: https://youtu.be/Kan_5OeSBN0?si=9u_9M7qNv3it8FNc
         createNotificationChannel()
 
+        //video
+        val video: String =
+            "<iframe width=\"100%\" height=\"100%\" src=\"https://www.youtube.com/embed/k9iYm9PEAHg?si=mGj4ab4XuNoo0lEp\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen></iframe>"
+        val webView: WebView = findViewById<WebView>(R.id.webView)
+        webView.loadData(video,"text/html","utf-8")
+        webView.settings.javaScriptEnabled = true
+        webView.webChromeClient = WebChromeClient()
+
+
 
     }
 
@@ -112,8 +123,6 @@ class SpecsActivity : AppCompatActivity() {
             notify(1, builder.build())
         }
     }
-
-
 
 
 }
