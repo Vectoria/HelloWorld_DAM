@@ -10,47 +10,50 @@
         android:id="@+id/specs_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="24dp"
         android:text="@string/specs_text"
         android:textAlignment="center"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent" />
 
     <ImageView
         android:id="@+id/settings_icon"
         android:layout_width="147dp"
         android:layout_height="112dp"
+        android:layout_marginTop="85dp"
         android:contentDescription="@string/engrenagem"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.02"
-        app:srcCompat="@drawable/baseline_settings_24" />
-
-    <WebView
-        android:id="@+id/webView"
-        android:layout_width="408dp"
-        android:layout_height="291dp"
-        android:layout_marginTop="19dp"
-        android:background="@android:color/transparent"
-        app:layout_constraintBottom_toTopOf="@+id/specs_text"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.333"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/settings_icon"
-        app:layout_constraintVertical_bias="0.036" />
-
-    <Button
-        android:id="@+id/button_notification"
-        android:layout_width="217dp"
-        android:layout_height="69dp"
-        android:onClick="sendNotification"
-        android:text="@string/notificacao"
-        app:icon="@drawable/baseline_notifications_24"
         app:layout_constraintBottom_toTopOf="@+id/specs_text"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/webView"
-        app:layout_constraintVertical_bias="0.294" />
+        app:layout_constraintVertical_bias="0.339"
+        app:srcCompat="@drawable/baseline_settings_24" />
+
+    <WebView
+        android:id="@+id/webView"
+        android:layout_width="347dp"
+        android:layout_height="234dp"
+        android:background="@android:color/transparent"
+        app:layout_constraintBottom_toTopOf="@+id/specs_text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.392" />
+
+    <Button
+        android:id="@+id/button_notification"
+        android:layout_width="218dp"
+        android:layout_height="49dp"
+        android:layout_marginBottom="19dp"
+        android:onClick="sendNotification"
+        android:text="@string/notificacao"
+        app:icon="@drawable/baseline_notifications_24"
+        app:layout_constraintBottom_toTopOf="@+id/webView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.664" />
 </androidx.constraintlayout.widget.ConstraintLayout>
