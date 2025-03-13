@@ -45,7 +45,7 @@ class SpecsActivity : AppCompatActivity() {
             Brand: ${Build.BRAND}
             Type: ${Build.TYPE}
             User: ${Build.USER}
-            Base: 1
+            Base: ${Build.VERSION_CODES.BASE}
             Incremental: ${Build.VERSION.INCREMENTAL}
             SDK: ${Build.VERSION.SDK_INT}
             Version Code: ${Build.VERSION.RELEASE}
